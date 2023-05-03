@@ -33,6 +33,8 @@ const Main = (props) => {
   }, []);
 
   const fetchRestaurants = async (category, zipCode, radiusInMiles) => {
+    console.log('IN FUNCTION')
+    console.log(zipCode)
     if (!mapRef.current) return;
 
     try {
@@ -116,7 +118,7 @@ const Main = (props) => {
 
         <NumberForm label="What's your zip code?" value={props.zipcode} function={props.setZipCode} />
 
-        <ButtonCustom buttonTitle={"Search NOW"} function={() => fetchRestaurants(props.category, '91326', props.radius)} />
+        <ButtonCustom buttonTitle={"Search NOW"} function={() => fetchRestaurants(props.category, props.zipcode, props.radius)} />
 
       </FormContainer>
 
