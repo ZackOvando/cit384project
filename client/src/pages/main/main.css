@@ -1,0 +1,10 @@
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    box-sizing: border-box;
+    padding: 4rem;
+    background-color: rgb(235, 235, 235);
+}
