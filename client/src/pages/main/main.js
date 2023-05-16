@@ -148,7 +148,7 @@ const Main = (props) => {
 
   const createMarkers = async (result, zipCode) => {
 
-    const response = await axios.get(`http://www.mapquestapi.com/geocoding/v1/address?key=${window.L.mapquest.key}&location=${zipCode}`);
+    const response = await axios.get(`https://www.mapquestapi.com/geocoding/v1/address?key=${window.L.mapquest.key}&location=${zipCode}`);
 
     const location = response.data.results[0].locations[0].latLng;
 
